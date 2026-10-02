@@ -16,18 +16,24 @@
     <a href="https://github.com/PeterLittle670" target="_blank">GitHub</a>
 </nav>
 
-<form action="mailto:peterlittle1687@gmail.com">
+<form action="mailto:YOUR_EMAIL_ADDRESS" method="POST" enctype="text/plain">
 
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name" required><br><br>
+    <label>Email:
+        <input type="email" name="email">
+    </label>
+    <br><br>
 
-    <label for="subject">Subject:</label>
-    <input type="text" id="subject" name="subject" required><br><br>
+    <label>Subject:
+        <input name="subject">
+    </label>
+    <br><br>
 
-    <label for="body">Message:</label><br>
-    <textarea id="body" name="body" rows="6" cols="40" required></textarea><br><br>
+    <label>Message:
+        <textarea name="body"></textarea>
+    </label>
+    <br><br>
 
-    <input type="submit" value="Send">
+    <button>Send</button>
 
 </form>
 </body>
