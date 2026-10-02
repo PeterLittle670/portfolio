@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Index for Contact</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
     <h1>Contact</h1>
@@ -16,5 +16,19 @@
     <a href="https://github.com/PeterLittle670" target="_blank">GitHub</a>
 </nav>
 
+<form action="mailto:peterlittle1687@gmail.com" method="POST" enctype="text/plain">
+
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <label for="subject">Subject:</label>
+    <input type="text" id="subject" name="subject" required><br><br>
+
+    <label for="body">Message:</label><br>
+    <textarea id="body" name="body" rows="6" cols="40" required></textarea><br><br>
+
+    <input type="submit" value="Send">
+
+</form>
 </body>
 </html>
