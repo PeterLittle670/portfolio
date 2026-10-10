@@ -1,3 +1,8 @@
+html {
+  --color-accent: #d6e2fb;
+  accent-color: var(--color-accent);
+}
+
 body {
   /* Set line height to 1.5 times the font size
 	   and use the OS’s UI font as the website font
@@ -16,7 +21,7 @@ img {
 nav {
     display: flex;
     margin-bottom: 1em;
-    border-bottom: 1px solid #244fac;
+    border-bottom: 1px solid oklch(80% 3% 200);
 }
 
 nav a {
@@ -28,6 +33,11 @@ nav a {
 }
 
 nav a.current {
-    border-bottom: 0.4em solid #3f7cff;
+    border-bottom: 0.4em solid oklch(80% 3% 200);
+    padding-bottom: 0.1em;
+}
+
+nav a:hover {
+    border-bottom: 0.4em solid var(--color-accent);
     padding-bottom: 0.1em;
 }
