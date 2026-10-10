@@ -42,3 +42,9 @@ nav a:hover {
     padding-bottom: 0.1em;
     background-color: #D6E2FB;
 }
+
+input,
+textarea,
+button {
+    font: inherit;
+}
