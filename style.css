@@ -12,3 +12,11 @@ img {
     width: 150px;
     height: auto;
 }
+
+nav {
+    display: flex;
+}
+
+nav a {
+    flex: 1;
+}
