@@ -16,7 +16,7 @@ img {
 nav {
     display: flex;
     margin-bottom: 1em;
-    border-bottom: 1px solid oklch(80% 3% 200);
+    border-bottom: 1px solid #D6E2FB;
 }
 
 nav a {
@@ -28,6 +28,6 @@ nav a {
 }
 
 nav a.current {
-    border-bottom: 0.4em solid oklch(80% 3% 200);
+    border-bottom: 0.4em solid #D6E2FB;
     padding-bottom: 0.1em;
 }
