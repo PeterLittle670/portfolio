@@ -28,6 +28,6 @@ nav a {
 }
 
 nav a.current {
-    border-bottom: 0.4em solid #D6E2FB;
+    border-bottom: 0.4em solid #3f7cff;
     padding-bottom: 0.1em;
 }
