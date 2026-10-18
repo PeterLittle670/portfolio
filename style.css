@@ -1,7 +1,7 @@
 html {
   --color-accent: #82A6EE;
   accent-color: var(--color-accent);
-  color-scheme: dark;
+  color-scheme: light dark;
 }
 
 body {
@@ -58,9 +58,18 @@ nav a:hover {
     background-color: color-mix(in oklch, var(--color-accent), canvas 85%);
 }
 
+.color-scheme {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 80%;
+    font-family: inherit;
+}
+
 input,
 textarea,
-button {
+button,
+select {
     font: inherit;
 }
 
