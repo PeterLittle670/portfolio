@@ -1,62 +1,75 @@
 [
     {
+        "title": "OceanPulse – AI Fishing Intelligence Platform",
+        "year": "2026",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "• Ingested oceanographic data from 6 public APIs onto a shared 0.25° spatial grid, producing a ~1.2 GB data cube with 0% null values<br>• Trained an encoder-decoder ConvLSTM to forecast sea surface temperature, height, chlorophyll, MLD, and salinity 7 days ahead<br>• Trained 270 per-species distribution classifiers from fused biological and environmental data, achieving mean ROC-AUC of 0.832<br>• Chained forecasting, feature derivation, and species scoring into an interactive CLI pipeline"
+    },
+    {
+        "title": "EMG Prosthetic Gesture Classifier",
+        "year": "2025",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "• Built a bidirectional LSTM in PyTorch to classify hand gestures from multichannel EMG biosignals, reaching 82% accuracy<br>• Developed a notch and bandpass filtering pipeline to clean raw signal noise<br>• Used sliding-window segmentation to convert continuous EMG data into labeled training sequences<br>• Benchmarked generalization across the MindRove and UCI datasets using confusion matrices and classification reports"
+    },
+    {
+        "title": "Recipe Rating Predictor",
+        "year": "2026",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "• Analyzed 800K+ Food.com recipe reviews across 83K recipes to test whether hyper-palatable foods receive higher ratings<br>• Engineered features including caloric density per step and log-transformed cooking time<br>• Tuned a Random Forest Regressor, cutting RMSE by 30% over a linear regression baseline<br>• Ran permutation-based hypothesis testing and missingness analysis; deployed findings as an interactive report on GitHub Pages"
+    },
+    {
+        "title": "Chassis Alignment Mode – Triton Robotics",
+        "year": "2025",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "• Implemented a CHASSIS_ALIGN control mode using modular yaw error folding to lock a competition robot's head to the nearest of 4 symmetric panels<br>• Calibrated a 13-bit encoder reference offset from streamed live tick data<br>• Integrated the alignment loop into the real-time chassis subsystem alongside drive and IMU updates"
+    },
+    {
+        "title": "US vs China Climate Emissions – Persuasive/Deceptive Visualization",
+        "year": "2026",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "• DSC 106 group project exploring how the same emissions dataset can be visualized to tell opposing narratives<br>• Contrasts an honest presentation with a deliberately deceptive one<br>• Illustrates how chart design choices shape interpretation",
+        "url": "https://jeffreykang03.github.io/dsc106-project2/"
+    },
+    {
+        "title": "GroceryDB – Expository Visualization",
+        "year": "2026",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "• DSC 106 expository visualization project built on the GroceryDB dataset<br>• Centered on the finding that carbohydrate content is the clearest signal of food processing (FPro) among available nutritional variables"
+    },
+    {
         "title": "Lorem ipsum",
+        "year": "2024",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
     },
     {
         "title": "Lorem ipsum",
+        "year": "2024",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
     },
     {
         "title": "Lorem ipsum",
+        "year": "2025",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
     },
     {
         "title": "Lorem ipsum",
+        "year": "2025",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
     },
     {
         "title": "Lorem ipsum",
+        "year": "2026",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
     },
     {
         "title": "Lorem ipsum",
+        "year": "2026",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-    },
-    {
-        "title": "Lorem ipsum",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-    },
-    {
-        "title": "Lorem ipsum",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Lorem  sit."
-    },
-    {
-        "title": "Lorem ipsum",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Lorem ipsum elit."
-    },
-    {
-        "title": "Lorem ipsum",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Lorem ipsum elit."
-    },
-    {
-        "title": "Lorem ipsum",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Lorem ipsum elit."
-    },
-    {
-        "title": "Lorem ipsum",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Lorem ipsum dolor sit amet consectetur."
     }
 ]
