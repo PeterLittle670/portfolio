@@ -105,6 +105,19 @@ button {
     margin: 0;
 }
 
+#projects-plot {
+    max-width: 20em;
+    margin-block: 2em;
+
+    overflow: visible;
+}
+
+.project-year {
+    color: gray;
+    font-family: Baskerville, serif;
+    font-variant-numeric: oldstyle-nums;
+}
+
 .resume {
     h1 {
         font-size: 300%;
