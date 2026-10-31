@@ -110,12 +110,31 @@ button {
     margin-block: 2em;
 
     overflow: visible;
+
+    path {
+        transition: 300ms;
+        cursor: pointer;
+    }
+
+    &:has(path:hover) {
+        path:not(:hover) {
+            opacity: 0.5;
+        }
+    }
 }
 
 .container {
     display: flex;
     align-items: center;
     gap: 2em;
+}
+
+.selected {
+    --color: oklch(60% 45% 0) !important;
+
+    &:is(path) {
+        fill: var(--color);
+    }
 }
 
 .legend {

@@ -11,6 +11,7 @@ projectsTitle.textContent = `${projects.length} Projects`;
 
 let arcGenerator = d3.arc().innerRadius(0).outerRadius(50);
 let colors = d3.scaleOrdinal(d3.schemeTableau10);
+let selectedIndex = -1;
 
 // Refactor all plotting into one function
 function renderPieChart(projectsGiven) {
@@ -40,7 +41,30 @@ function renderPieChart(projectsGiven) {
     svg
       .append('path')
       .attr('d', arc)
-      .attr('fill', colors(idx));
+      .attr('fill', colors(idx))
+      .on('click', () => {
+        selectedIndex = selectedIndex === idx ? -1 : idx;
+
+        svg
+          .selectAll('path')
+          .attr('class', (_, i) => (i === selectedIndex ? 'selected' : ''));
+
+        legend
+          .selectAll('li')
+          .attr('class', (_, i) =>
+            i === selectedIndex ? 'legend-item selected' : 'legend-item',
+          );
+
+        if (selectedIndex === -1) {
+          renderProjects(projects, projectsContainer, 'h2');
+        } else {
+          let selectedYear = newData[selectedIndex].label;
+          let filteredProjects = projects.filter(
+            (project) => project.year === selectedYear,
+          );
+          renderProjects(filteredProjects, projectsContainer, 'h2');
+        }
+      });
   });
 
   newData.forEach((d, idx) => {
