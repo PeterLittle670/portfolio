@@ -280,6 +280,17 @@ button {
     }
 }
 
+.gridlines {
+    .tick line {
+        stroke: oklch(55% 0 0);
+        stroke-opacity: 0.2;
+    }
+
+    .domain {
+        display: none;
+    }
+}
+
 dl.stats {
     display: grid;
     grid-auto-flow: column;
