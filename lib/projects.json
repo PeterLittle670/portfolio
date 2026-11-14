@@ -1,5 +1,12 @@
 [
     {
+        "title": "Bike Trends",
+        "year": "2026",
+        "image": "https://peterlittle670.github.io/portfolio/images/bike_trends.jpg",
+        "description": "• An interactive map of Bluebikes traffic across Boston and Cambridge<br>• Circle size shows how busy each station is, circle color shows whether riders mostly arrive or depart there, and a time-of-day slider filters the trips to show how commuting patterns shift between morning and evening<br>• Built with Mapbox GL JS and D3, using about 260,000 rides from March 2024 plus Boston and Cambridge bike-lane data",
+        "url": "https://peterlittle670.github.io/bike_trends/"
+    },
+    {
         "title": "OceanPulse – AI Fishing Intelligence Platform",
         "year": "2026",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
