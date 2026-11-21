@@ -229,8 +229,19 @@ function renderScatterPlot(data, commits) {
 function updateScatterPlot(data, commits) {
   const svg = d3.select('#chart').select('svg');
 
-  // Re-fit the x domain to the commits currently shown
-  xScale = xScale.domain(d3.extent(commits, (d) => d.datetime));
+  // Clear any old brush selection, since the points underneath it move
+  if (d3.brushSelection(svg.node())) {
+    svg.call(brush.move, null);
+  }
+
+  // Re-fit the x domain; pad it by a day if there's only one commit,
+  // otherwise the domain has zero width and the axis can't draw ticks
+  let [minDate, maxDate] = d3.extent(commits, (d) => d.datetime);
+  if (+minDate === +maxDate) {
+    minDate = d3.timeDay.offset(minDate, -1);
+    maxDate = d3.timeDay.offset(maxDate, 1);
+  }
+  xScale = xScale.domain([minDate, maxDate]);
 
   const [minLines, maxLines] = d3.extent(commits, (d) => d.totalLines);
   const rScale = d3.scaleSqrt().domain([minLines, maxLines]).range([2, 30]);
@@ -266,9 +277,12 @@ function updateScatterPlot(data, commits) {
     });
 }
 
+let brush;
+
 function createBrushSelector(svg) {
-  // Create brush
-  svg.call(d3.brush().on('start brush end', brushed));
+  // Create brush (kept in a variable so updateScatterPlot can clear it)
+  brush = d3.brush().on('start brush end', brushed);
+  svg.call(brush);
 
   // Raise dots and everything after overlay
   svg.selectAll('.dots, .overlay ~ *').raise();
