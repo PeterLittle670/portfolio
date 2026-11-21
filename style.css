@@ -329,9 +329,28 @@ dl.info[hidden]:not(:hover, :focus-within) {
 }
 
 circle {
-    transition: 200ms;
+    transition: all 200ms, r calc(var(--r) * 100ms);
     transform-origin: center;
     transform-box: fill-box;
+
+    @starting-style {
+        r: 0;
+    }
+}
+
+#time-filter {
+    display: flex;
+
+    label {
+        flex: 1;
+        display: flex;
+        align-items: baseline;
+        gap: 0.5em;
+    }
+
+    time {
+        margin-left: auto;
+    }
 }
 
 circle:hover {
