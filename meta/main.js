@@ -360,6 +360,48 @@ let commitMaxTime = timeScale.invert(commitProgress);
 // Will get updated as user changes slider
 let filteredCommits = commits;
 
+// Maps technology (file type) to a color
+let colors = d3.scaleOrdinal(d3.schemeTableau10);
+
+function updateFileDisplay(filteredCommits) {
+  let lines = filteredCommits.flatMap((d) => d.lines);
+  let files = d3
+    .groups(lines, (d) => d.file)
+    .map(([name, lines]) => {
+      return { name, lines };
+    })
+    .sort((a, b) => b.lines.length - a.lines.length);
+
+  // ':scope > div' so we only match the per-file divs, not the .loc dots inside them
+  let filesContainer = d3
+    .select('#files')
+    .selectAll(':scope > div')
+    .data(files, (d) => d.name)
+    .join(
+      // This code only runs when the div is initially rendered
+      (enter) =>
+        enter.append('div').call((div) => {
+          div.append('dt').append('code');
+          div.append('dd');
+        }),
+    )
+    .order(); // re-sort the DOM to match the (sorted) data as files grow
+
+  // This code updates the div info
+  filesContainer
+    .select('dt')
+    .html((d) => `<code>${d.name}</code><small>${d.lines.length} lines</small>`);
+
+  // append one div for each line
+  filesContainer
+    .select('dd')
+    .selectAll('div')
+    .data((d) => d.lines)
+    .join('div')
+    .attr('class', 'loc')
+    .attr('style', (d) => `--color: ${colors(d.type)}`);
+}
+
 const timeSlider = document.getElementById('commit-progress');
 const selectedTime = document.getElementById('commit-time');
 
@@ -374,6 +416,7 @@ function onTimeSliderChange() {
   filteredCommits = commits.filter((d) => d.datetime <= commitMaxTime);
 
   updateScatterPlot(data, filteredCommits);
+  updateFileDisplay(filteredCommits);
   renderCommitInfo(
     filteredCommits.flatMap((d) => d.lines),
     filteredCommits,
